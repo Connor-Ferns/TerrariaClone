@@ -2,7 +2,7 @@
 
 Tile* world[WORLD_WIDTH][WORLD_HEIGHT] = { nullptr };
 
-void GenerateTerrain(const TerrainSettings& settings) 
+void GenerateTerrain(const TerrainSettings& settings, Texture2D dirtTexture, Texture2D stoneTexture)
 {
     FastNoiseLite noise;
     noise.SetNoiseType(FastNoiseLite::NoiseType_Perlin);
@@ -21,11 +21,11 @@ void GenerateTerrain(const TerrainSettings& settings)
             }
             else if (y < terrainHeight + settings.dirtDepth) 
             {
-                world[x][y] = new DirtTile(x, y);
+                world[x][y] = new DirtTile(x, y, dirtTexture);
             }
             else 
             {
-                world[x][y] = new StoneTile(x, y);
+                world[x][y] = new StoneTile(x, y, stoneTexture);
             }
         }
     }

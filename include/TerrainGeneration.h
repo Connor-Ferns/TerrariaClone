@@ -11,7 +11,7 @@ const int TILE_SIZE = 16;
 
 extern Tile* world[WORLD_WIDTH][WORLD_HEIGHT];
 
-void GenerateTerrain(const TerrainSettings& settings);
+void GenerateTerrain(const TerrainSettings& settings, Texture2D dirtTexture, Texture2D stoneTexture);
 void DrawWorld();
 void CleanupWorld();
 

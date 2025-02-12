@@ -4,21 +4,24 @@
 #include "raylib.h"
 
 // Enum for tile types
-enum class TileType {
+enum class TileType 
+{
     AIR,
     DIRT,
     STONE
 };
 
 // Base Tile Class
-class Tile {
+class Tile 
+{
 protected:
     int x, y;
     bool isSolid;
     TileType type; // Store the tile type
+    Texture2D texture;
 
 public:
-    Tile(int x, int y, bool solid, TileType type);
+    Tile(int x, int y, bool solid, TileType type, Texture2D texture);
     virtual ~Tile() {}
 
     virtual void Draw() = 0; // Pure virtual function for rendering
@@ -27,16 +30,18 @@ public:
 };
 
 // Dirt Tile
-class DirtTile : public Tile {
+class DirtTile : public Tile 
+{
 public:
-    DirtTile(int x, int y);
+    DirtTile(int x, int y, Texture2D texture);
     void Draw() override;
 };
 
 // Stone Tile
-class StoneTile : public Tile {
+class StoneTile : public Tile 
+{
 public:
-    StoneTile(int x, int y);
+    StoneTile(int x, int y, Texture2D texture);
     void Draw() override;
 };
 
