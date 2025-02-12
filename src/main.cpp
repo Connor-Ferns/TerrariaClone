@@ -1,5 +1,6 @@
 #include "raylib.h"
 #include "TerrainGeneration.h"
+#include "TextureManager.h"
 
 int main()
 {
@@ -8,12 +9,7 @@ int main()
 
 	InitWindow(winWidth, winHeight, "Terraria Clone Please Help");
 
-	Texture dirtTexture = LoadTexture("resources/Tiles/dirt.png");
-	Texture stoneTexture = LoadTexture("resources/Tiles/stone.png");
-
-	// Apply nearest-neighbor filtering to keep pixels sharp
-	SetTextureFilter(dirtTexture, TEXTURE_FILTER_POINT);
-	SetTextureFilter(stoneTexture, TEXTURE_FILTER_POINT);
+	TextureManager::LoadTextures();
 
 	TerrainSettings settings;
 	settings.noiseFrequency = 0.02f;
@@ -21,7 +17,7 @@ int main()
 	settings.maxHeight = 70;
 	settings.dirtDepth = 5;
 
-	GenerateTerrain(settings, dirtTexture, stoneTexture);
+	GenerateTerrain(settings);
 	
 	SetTargetFPS(60);
 	while (!WindowShouldClose())
@@ -32,8 +28,7 @@ int main()
 		EndDrawing();
 	}
 
-	UnloadTexture(dirtTexture);
-	UnloadTexture(stoneTexture);
+	TextureManager::UnloadTextures();
 
 	CleanupWorld();
 	CloseWindow();

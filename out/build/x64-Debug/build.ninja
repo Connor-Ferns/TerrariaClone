@@ -58,6 +58,15 @@ build CMakeFiles\TerrariaClone.dir\src\TerrainGeneration.cpp.obj: CXX_COMPILER__
   TARGET_COMPILE_PDB = CMakeFiles\TerrariaClone.dir\
   TARGET_PDB = TerrariaClone.pdb
 
+build CMakeFiles\TerrariaClone.dir\src\TextureManager.cpp.obj: CXX_COMPILER__TerrariaClone_unscanned_Debug D$:\C++VisualStudio\TerrariaClone\src\TextureManager.cpp || cmake_object_order_depends_target_TerrariaClone
+  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DPRODUCTION_BUILD=0 -DRESOURCES_PATH=\"D:/C++VisualStudio/TerrariaClone/resources/\" -D_CRT_SECURE_NO_WARNINGS
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /GL
+  INCLUDES = -ID:\C++VisualStudio\TerrariaClone\include -ID:\C++VisualStudio\TerrariaClone\thirdparty\raylib-5.0\src -ID:\C++VisualStudio\TerrariaClone\thirdparty\raylib-5.0\src\external\glfw\include -ID:\C++VisualStudio\TerrariaClone\thirdparty\imgui-docking\imgui -ID:\C++VisualStudio\TerrariaClone\thirdparty\rlImGui
+  OBJECT_DIR = CMakeFiles\TerrariaClone.dir
+  OBJECT_FILE_DIR = CMakeFiles\TerrariaClone.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\TerrariaClone.dir\
+  TARGET_PDB = TerrariaClone.pdb
+
 build CMakeFiles\TerrariaClone.dir\src\Tiles.cpp.obj: CXX_COMPILER__TerrariaClone_unscanned_Debug D$:\C++VisualStudio\TerrariaClone\src\Tiles.cpp || cmake_object_order_depends_target_TerrariaClone
   DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DPRODUCTION_BUILD=0 -DRESOURCES_PATH=\"D:/C++VisualStudio/TerrariaClone/resources/\" -D_CRT_SECURE_NO_WARNINGS
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd /GL
@@ -84,7 +93,7 @@ build CMakeFiles\TerrariaClone.dir\src\main.cpp.obj: CXX_COMPILER__TerrariaClone
 #############################################
 # Link the executable TerrariaClone.exe
 
-build TerrariaClone.exe: CXX_EXECUTABLE_LINKER__TerrariaClone_Debug CMakeFiles\TerrariaClone.dir\src\TerrainGeneration.cpp.obj CMakeFiles\TerrariaClone.dir\src\Tiles.cpp.obj CMakeFiles\TerrariaClone.dir\src\main.cpp.obj | thirdparty\raylib-5.0\raylib\raylib.lib thirdparty\imgui-docking\imgui.lib thirdparty\rlImGui\rlimgui.lib thirdparty\imgui-docking\imgui.lib thirdparty\raylib-5.0\raylib\raylib.lib thirdparty\raylib-5.0\raylib\external\glfw\src\glfw3.lib || thirdparty\imgui-docking\imgui.lib thirdparty\raylib-5.0\raylib\external\glfw\src\glfw3.lib thirdparty\raylib-5.0\raylib\raylib.lib thirdparty\rlImGui\rlimgui.lib
+build TerrariaClone.exe: CXX_EXECUTABLE_LINKER__TerrariaClone_Debug CMakeFiles\TerrariaClone.dir\src\TerrainGeneration.cpp.obj CMakeFiles\TerrariaClone.dir\src\TextureManager.cpp.obj CMakeFiles\TerrariaClone.dir\src\Tiles.cpp.obj CMakeFiles\TerrariaClone.dir\src\main.cpp.obj | thirdparty\raylib-5.0\raylib\raylib.lib thirdparty\imgui-docking\imgui.lib thirdparty\rlImGui\rlimgui.lib thirdparty\imgui-docking\imgui.lib thirdparty\raylib-5.0\raylib\raylib.lib thirdparty\raylib-5.0\raylib\external\glfw\src\glfw3.lib || thirdparty\imgui-docking\imgui.lib thirdparty\raylib-5.0\raylib\external\glfw\src\glfw3.lib thirdparty\raylib-5.0\raylib\raylib.lib thirdparty\rlImGui\rlimgui.lib
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd /GL
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console  /INCREMENTAL:NO /LTCG
   LINK_LIBRARIES = thirdparty\raylib-5.0\raylib\raylib.lib  thirdparty\imgui-docking\imgui.lib  thirdparty\rlImGui\rlimgui.lib  thirdparty\imgui-docking\imgui.lib  thirdparty\raylib-5.0\raylib\raylib.lib  opengl32.lib  glu32.lib  winmm.lib  thirdparty\raylib-5.0\raylib\external\glfw\src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

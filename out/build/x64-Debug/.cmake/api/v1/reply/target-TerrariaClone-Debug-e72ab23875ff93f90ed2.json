@@ -157,7 +157,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -265,7 +266,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -275,6 +277,12 @@
 			"backtrace" : 10,
 			"compileGroupIndex" : 0,
 			"path" : "src/TerrainGeneration.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 10,
+			"compileGroupIndex" : 0,
+			"path" : "src/TextureManager.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

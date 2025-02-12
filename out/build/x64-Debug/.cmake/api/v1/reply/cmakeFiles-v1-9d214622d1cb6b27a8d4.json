@@ -6,6 +6,7 @@
 			"paths" : 
 			[
 				"D:/C++VisualStudio/TerrariaClone/src/TerrainGeneration.cpp",
+				"D:/C++VisualStudio/TerrariaClone/src/TextureManager.cpp",
 				"D:/C++VisualStudio/TerrariaClone/src/Tiles.cpp",
 				"D:/C++VisualStudio/TerrariaClone/src/main.cpp"
 			],

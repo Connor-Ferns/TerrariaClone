@@ -21,7 +21,7 @@ protected:
     Texture2D texture;
 
 public:
-    Tile(int x, int y, bool solid, TileType type, Texture2D texture);
+    Tile(int x, int y, bool solid, TileType type);
     virtual ~Tile() {}
 
     virtual void Draw() = 0; // Pure virtual function for rendering
@@ -33,7 +33,7 @@ public:
 class DirtTile : public Tile 
 {
 public:
-    DirtTile(int x, int y, Texture2D texture);
+    DirtTile(int x, int y);
     void Draw() override;
 };
 
@@ -41,7 +41,7 @@ public:
 class StoneTile : public Tile 
 {
 public:
-    StoneTile(int x, int y, Texture2D texture);
+    StoneTile(int x, int y);
     void Draw() override;
 };
 

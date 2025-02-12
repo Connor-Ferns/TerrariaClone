@@ -1,12 +1,13 @@
 #include "Tiles.h"
+#include "TextureManager.h"
 
 // Base Tile Constructor
-Tile::Tile(int x, int y, bool solid, TileType type, Texture2D texture) :
+Tile::Tile(int x, int y, bool solid, TileType type) :
     x(x),
     y(y),
     isSolid(solid),
     type(type) ,
-    texture(texture)
+    texture(TextureManager::GetTexture(static_cast<int>(type)))
 {}
 
 bool Tile::IsSolid() 
@@ -20,13 +21,12 @@ TileType Tile::GetType()
 }
 
 // Dirt Tile Implementation
-DirtTile::DirtTile(int x, int y, Texture2D texture) : 
+DirtTile::DirtTile(int x, int y) : 
     Tile(
         x,
         y,
         true,
-        TileType::DIRT,
-        texture)
+        TileType::DIRT)
     {}
 
 void DirtTile::Draw() 
@@ -38,13 +38,12 @@ void DirtTile::Draw()
 }
 
 // Stone Tile Implementation
-StoneTile::StoneTile(int x, int y, Texture2D texture) : 
+StoneTile::StoneTile(int x, int y) : 
     Tile(
         x,
         y,
         true,
-        TileType::STONE,
-        texture)
+        TileType::STONE)
     {}
 
 void StoneTile::Draw() {
